@@ -34,6 +34,24 @@
   clear: both;
 }
 
+.full-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.leni-head, rest-of-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.leni-head {
+  z-index: 10;
+}
+
 body {
   background-color: #39ff14;
 }
