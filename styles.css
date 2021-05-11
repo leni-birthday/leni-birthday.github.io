@@ -1,0 +1,38 @@
+#leni-dabbing {
+  min-width: 33%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+  width: 33.333%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+  width: 33.333%;
+}
+
+.middle {
+  display: inline-block;
+  width: 33.333%;
+}
+
+.side-text {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-color: #39ff14;
+}
