@@ -55,3 +55,34 @@
 body {
   background-color: #39ff14;
 }
+
+.move-horizontal h1 {
+  animation: marquee-horizontal 10s linear infinite;
+}
+
+.move-up h1 {
+  display: inline-block;
+  padding-top: 100%;
+  animation: marquee-up 2s linear infinite;
+}
+
+.move-down h1 {
+  display: inline-block;
+  padding-bottom: 100%;
+  animation: marquee-down 2s linear infinite;
+}
+
+@keyframes marquee-horizontal {
+  from {transform: translateX(-100%); }
+  to {transform: translateX(100%); }
+}
+
+@keyframes marquee-up {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(0, -100%); }
+}
+
+@keyframes marquee-down {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(0, 100%); }
+}
