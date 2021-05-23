@@ -42,3 +42,17 @@ function calcSpeed(prev, next) {
     return speed;
 
 }
+
+function checkIngredient(id) {
+    var ingredients = ["VODKA", "RUM", "TEQUILA", "ORANGENLIKÖR", "LIMETTENSAFT", "SIMPLESYRUP", "ZUCKERSIRUP", "SIRUP", "ZITRONENSAFT", "COLA", "ORANGENLIKOER",
+  "COCACOLA", "PEPSI", "SYRUP", "LIMETTE", "ZITRONE", "ZITRONEN", "LIMETTEN"];
+
+    var a = document.getElementById(id).value;
+    var b = ingredients.includes(a.toUpperCase().trim());
+
+    if (b) {
+      document.getElementById(id).style.backgroundColor="green"
+    } else {
+      document.getElementById(id).style.backgroundColor="red"
+    }
+}

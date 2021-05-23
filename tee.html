@@ -1,0 +1,71 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    <title>Long Island Ice Tea</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <script src="script.js"></script>
+
+        <h1><span id="countdown" style="color: red;"></span>: Was sind die Zutaten für einen Long Island Ice Tea????!!</h1>
+
+        <script type="text/javascript">
+          var timeleft = 60;
+          var downloadTimer = setInterval(function(){
+            if(timeleft <= 0){
+              clearInterval(downloadTimer);
+              document.getElementById("countdown").innerHTML = "KABOOM!!";
+            } else {
+              document.getElementById("countdown").innerHTML = timeleft + " SECONDS";
+            }
+            timeleft -= 1;
+          }, 1000);
+
+        </script>
+
+        <div><label for="ingredient1">First Ingredient</label></div>
+        <input type="text" id="ingredient1"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient1')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Second Ingredient</label></div>
+        <input type="text" id="ingredient2"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient2')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Third Ingredient</label></div>
+        <input type="text" id="ingredient3"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient3')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Forth Ingredient</label></div>
+        <input type="text" id="ingredient4"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient4')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Fifth Ingredient</label></div>
+        <input type="text" id="ingredient5"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient5')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Sixth Ingredient</label></div>
+        <input type="text" id="ingredient6"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient6')">check</button>
+
+        <hr/>
+
+        <div><label for="ingredient1">Seventh Ingredient</label></div>
+        <input type="text" id="ingredient7"/>
+        <button type="button" name="check" onclick="checkIngredient('ingredient7')">check</button>
+
+        <hr/>
+
+    </body>
+</html>
