@@ -1,19 +1,6 @@
 $(document).ready(function() {
-    animateHead($('.leni-head'));
-
+    animateHead($(".leni-head"));
 });
-
-function makeNewPosition($container) {
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $container.height() - 50;
-    var w = $container.width() - 50;
-
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-
-}
 
 function animateHead($target) {
     var newq = makeNewPosition($target.parent());
@@ -26,19 +13,26 @@ function animateHead($target) {
     }, speed, function() {
         animateHead($target);
     });
+}
 
+function makeNewPosition($container) {
+    // Get viewport dimensions (remove the dimension of the div)
+    const h = $container.height() - 50;
+    const w = $container.width() - 50;
+
+    const nh = Math.floor(Math.random() * h);
+    const nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
 }
 
 function calcSpeed(prev, next) {
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
+    const x = Math.abs(prev[1] - next[1]);
+    const y = Math.abs(prev[0] - next[0]);
 
-    var greatest = x > y ? x : y;
+    const greatest = x > y ? x : y;
 
-    var speedModifier = 0.4;
+    const speedModifier = 0.4;
 
-    var speed = Math.ceil(greatest / speedModifier);
-
-    return speed;
-
+    return Math.ceil(greatest / speedModifier);
 }
