@@ -16,7 +16,6 @@ function animateHead($target) {
 }
 
 function makeNewPosition($container) {
-    // Get viewport dimensions (remove the dimension of the div)
     const h = $container.height() - 50;
     const w = $container.width() - 50;
 
@@ -36,3 +35,5 @@ function calcSpeed(prev, next) {
 
     return Math.ceil(greatest / speedModifier);
 }
+
+

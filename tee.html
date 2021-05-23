@@ -1,0 +1,68 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Long Island Ice Tea</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <script src="scripts/tee.js"></script>
+
+        <center>
+        <h1>
+          <span id="countdown" style="color: red;"></span>
+          <br/>
+          Was sind die Zutaten für einen Long Island Ice Tea????!!
+        </h1>
+
+        <script type="text/javascript">
+          var timeleft = 60;
+          var downloadTimer = setInterval(function(){
+            if(timeleft <= 0){
+              clearInterval(downloadTimer);
+              document.getElementById("countdown").innerHTML = "KABOOM!!";
+
+              for (let i = 1; i < 8; i++) {
+                  document.getElementById("ingredient" + i).value = "";
+              }
+
+            } else {
+              document.getElementById("countdown").innerHTML = timeleft + " SECONDS";
+            }
+            timeleft -= 1;
+          }, 1000);
+
+        </script>
+
+        <div><label for="ingredient1">First Ingredient</label></div>
+        <input type="text" id="ingredient1"/>
+
+        <div><label for="ingredient1">Second Ingredient</label></div>
+        <input type="text" id="ingredient2"/>
+
+        <div><label for="ingredient1">Third Ingredient</label></div>
+        <input type="text" id="ingredient3"/>
+
+        <div><label for="ingredient1">Forth Ingredient</label></div>
+        <input type="text" id="ingredient4"/>
+
+        <div><label for="ingredient1">Fifth Ingredient</label></div>
+        <input type="text" id="ingredient5"/>
+
+        <div><label for="ingredient1">Sixth Ingredient</label></div>
+        <input type="text" id="ingredient6"/>
+
+        <div><label for="ingredient1">Seventh Ingredient</label></div>
+        <input type="text" id="ingredient7"/>
+        
+        <br/>
+        <br/>
+
+        <button type="button" name="check" onclick="checkIngredient()">Check</button>
+        </center>
+
+    </body>
+</html>
