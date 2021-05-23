@@ -5,11 +5,11 @@
 
 
     <title>Long Island Ice Tea</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     </head>
 
     <body>
-        <script src="scripts/tee.js"></script>
+        <script src="tea.js"></script>
 
         <center>
         <h1>
@@ -28,13 +28,12 @@
               for (let i = 1; i < 8; i++) {
                   document.getElementById("ingredient" + i).value = "";
               }
-
+              document.getElementById("checkButton").disabled = true;
             } else {
               document.getElementById("countdown").innerHTML = timeleft + " SECONDS";
             }
             timeleft -= 1;
           }, 1000);
-
         </script>
 
         <div><label for="ingredient1">First Ingredient</label></div>
@@ -61,7 +60,7 @@
         <br/>
         <br/>
 
-        <button type="button" name="check" onclick="checkIngredient()">Check</button>
+        <button id="checkButton" type="button" name="check" onclick="checkIngredient()">Check</button>
         </center>
 
     </body>

@@ -16,5 +16,8 @@ function checkIngredient() {
             areCorrect = false;
         }
     }
-
+    
+    if (areCorrect) {
+        window.location.href = "teaSuccess.html"
+    }
 }
