@@ -75,6 +75,20 @@ body {
   animation: marquee-down 2s linear infinite;
 }
 
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid purple;
+  color: red;
+  font-weight: bold;
+  background: pink;
+}
+
+.container {
+  padding-top: 40px;
+}
+
 @keyframes marquee-horizontal {
   from {transform: translateX(-100%); }
   to {transform: translateX(100%); }

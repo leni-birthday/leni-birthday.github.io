@@ -36,4 +36,19 @@ function calcSpeed(prev, next) {
     return Math.ceil(greatest / speedModifier);
 }
 
+function checkCoordinates() {
 
+    const teahouse = [48.1455654679902, 11.585828454077774];
+    const stauwehr = [48.16864223344396, 11.616827269628384];
+
+    var coordX = document.getElementById('x').value;
+    var coordY = document.getElementById('y').value;
+
+    if ( coordX == teahouse[0] && coordY == teahouse[1] ) {
+      document.getElementById('solution').innerHTML = "Hey Leni! Happy Birthday <3. Good job finding out those coordinates. This is indeed the teahouse you're looking for! See you soon :)"
+    } else if ( coordX == stauwehr[0] && coordY == stauwehr[1] ) {
+      document.getElementById('solution').innerHTML = "Good job everyone! Der Stauwehr ist das nächste Ziel. Keep up the good work :)"
+    } else {
+      document.getElementById('solution').innerHTML = "Leider nicht ... aber immer weiter so!"
+    }
+}

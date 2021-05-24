@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Coordinate Check</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+      <script src="home.js"></script>
+        <center>
+
+          <h1>Enter some coordinates to check whether you're on the right track!</h1>
+          <br>
+
+          <label for="x">X:</label>
+          <input type="text" id="x"></input>
+
+          <label for="y">Y:</label>
+          <input type="text" id="y"></input>
+
+          <br><br>
+          <div>
+          <button id="coordButton" type="button" name="checks" onclick="checkCoordinates()" style="background:red; color: pink;">
+            Check</button>
+          </div>
+
+          <br><br>
+          <div id="solution"></div>
+
+        </center>
+
+    </body>
+</html>
