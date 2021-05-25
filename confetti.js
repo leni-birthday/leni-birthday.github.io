@@ -1,40 +1,3 @@
-$(document).ready(function() {
-    animateHead($(".leni-head"));
-});
-
-function animateHead($target) {
-    var newq = makeNewPosition($target.parent());
-    var oldq = $target.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    $target.animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateHead($target);
-    });
-}
-
-function makeNewPosition($container) {
-    const h = $container.height() - 50;
-    const w = $container.width() - 50;
-
-    const nh = Math.floor(Math.random() * h);
-    const nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-}
-
-function calcSpeed(prev, next) {
-    const x = Math.abs(prev[1] - next[1]);
-    const y = Math.abs(prev[0] - next[0]);
-
-    const greatest = x > y ? x : y;
-
-    const speedModifier = 0.4;
-
-    return Math.ceil(greatest / speedModifier);
-}
 
 function checkCoordinates() {
 
@@ -49,6 +12,7 @@ function checkCoordinates() {
     var coordX = document.getElementById('x').value;
     var coordY = document.getElementById('y').value;
     var text = "Leider nicht ... aber immer weiter so! (Vielleicht nicht genau so, weil ihr euch vermutlich grad verirrt - oder ihr habt euch verschrieben...)";
+    var confetti = true;
 
     if ( coordX == teahouse[0] && coordY == teahouse[1] ) {
       text = "Hey Leni! Happy Birthday <3. Good job finding these coordinates. This is indeed the teahouse you're looking for! See you soon :)";
@@ -64,33 +28,37 @@ function checkCoordinates() {
       text = "Ja wer will schon nach GIriechenland fahren, wenn man am Mono chillen kann. *sonnenbrillensmiley*";
     } else if ( coordX == tristan[0] && coordY == tristan[1] ) {
       text = "It's the final Countdown! Super, dass ihr es so weit geschafft habt!";
+    } else {
+      confetti = false;
     }
 
     document.getElementById('solution').innerHTML = text;
 
+    if (confetti) {
     // launch confetti
-    fire(0.25, {
-      spread: 26,
-      startVelocity: 55,
-    });
-    fire(0.2, {
-      spread: 60,
-    });
-    fire(0.35, {
-      spread: 100,
-      decay: 0.91,
-      scalar: 0.8
-    });
-    fire(0.1, {
-      spread: 120,
-      startVelocity: 25,
-      decay: 0.92,
-      scalar: 1.2
-    });
-    fire(0.1, {
-      spread: 120,
-      startVelocity: 45,
-    });
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      });
+      fire(0.2, {
+        spread: 60,
+      });
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      });
+    }
 }
 
 function fire(particleRatio, opts) {
