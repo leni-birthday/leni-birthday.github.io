@@ -59,10 +59,8 @@ body {
   margin: 0 1px 1px 0;
   display: inline-block;
   position: relative;
-  /* font: 24px Calibri; */
-  width: 25px;
-  height: 25px;
-  /* line-height: 1.25em; */
+  width: 20px;
+  height: 20px;
   vertical-align: top;
 }
 .char:focus{
@@ -78,8 +76,8 @@ body {
   border: 0;
   padding: 0;
   margin: 1px 0 0 -1px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   background-color: rgb(200, 200, 200);
 }
