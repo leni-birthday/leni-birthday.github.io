@@ -1,4 +1,4 @@
-function checkIngredient() {
+function checkColumns() {
     var ingredients = ["VODKA", "RUM", "TEQUILA", "ORANGENLIKÖR", "LIMETTENSAFT", "SIMPLESYRUP", "ZUCKERSIRUP", "SIRUP", "ZITRONENSAFT", "COLA", "ORANGENLIKOER",
   "COCACOLA", "PEPSI", "SYRUP", "LIMETTE", "ZITRONE", "ZITRONEN", "LIMETTEN"];
 
@@ -18,6 +18,6 @@ function checkIngredient() {
     }
     
     if (areCorrect) {
-        window.location.href = "teaSuccess.html"
+        window.location.href = "teaSuccess.html";
     }
 }
