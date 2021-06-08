@@ -1,4 +1,4 @@
-function checkColumns() {
+function checkIngredient() {
     var ingredients = ["VODKA", "RUM", "TEQUILA", "ORANGENLIKÖR", "LIMETTENSAFT", "SIMPLESYRUP", "ZUCKERSIRUP", "SIRUP", "ZITRONENSAFT", "COLA", "ORANGENLIKOER",
   "COCACOLA", "PEPSI", "SYRUP", "LIMETTE", "ZITRONE", "ZITRONEN", "LIMETTEN"];
 
