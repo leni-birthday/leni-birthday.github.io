@@ -1,16 +1,16 @@
 
 function checkCoordinates() {
     const teahouse = [48.14537, 11.58580];
-    const mono = [48.15013255438472, 11.590984842645833];
-    const nirgendwo = [48.165410841056435, 11.603425288702356];
-    const stauwehr = [48.16864223344396, 11.616827269628384];
-    const amphi = [48.17381436439648, 11.612168856134598];
-    const ojb = [48.17675991226882, 11.617089456137505]; //TODO fill in real coordinates
-    const tristan = [48.18301338785179, 11.60944220926723];
+    const mono = [48.1501, 11.5909];
+    const nirgendwo = [48.1654, 11.6034];
+    const stauwehr = [48.1686, 11.6168];
+    const amphi = [48.1738, 11.6121];
+    const ojb = [48.1767, 11.6170]; //TODO fill in real coordinates
+    const tristan = [48.1830, 11.6094];
 
     var coordX = document.getElementById('x').value;
     var coordY = document.getElementById('y').value;
-    var text = "Leider nicht ... aber immer weiter so! (Vielleicht nicht genau so, weil ihr euch vermutlich grad verirrt - oder ihr habt euch verschrieben...)";
+    var text = "Leider nicht ... aber immer weiter so! (Vielleicht nicht genau so, weil ihr euch vermutlich grad verirrt - oder ihr habt euch verschrieben...) Hint: nur 4 Stellen diesmal";
     var confetti = true;
 
     if ( coordX == teahouse[0] && coordY == teahouse[1] ) {
